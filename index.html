@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Money Tracker</h1>
+    </header>
+    <main>
+        <div id="expenses">
+            <h2>Expenses</h2>
+            <ul id="expense-list"></ul>
+            <button onclick="openExpenseForm()">Add Expense</button>
+        </div>
+        <div id="incomes">
+            <h2>Incomes</h2>
+            <ul id="income-list"></ul>
+            <button onclick="openIncomeForm()">Add Income</button>
+        </div>
+    </main>
+
+    <!-- Expense Form Modal -->
+    <div id="expense-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExpenseForm()">&times;</span>
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <label for="expense-name">Name:</label>
+                <input type="text" id="expense-name" name="expense-name" required>
+                <label for="expense-amount">Amount:</label>
+                <input type="number" id="expense-amount" name="expense-amount" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="income-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeIncomeForm()">&times;</span>
+            <h2>Add Income</h2>
+            <form id="income-form">
+                <label for="income-name">Name:</label>
+                <input type="text" id="income-name" name="income-name" required>
+                <label for="income-amount">Amount:</label>
+                <input type="number" id="income-amount" name="income-amount" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+ 
